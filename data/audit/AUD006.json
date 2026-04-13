@@ -1,0 +1,17 @@
+{
+  "id": "AUD006",
+  "action": "create",
+  "entity": "invoice",
+  "entityId": "INV/2526/0006",
+  "timestamp": "2026-03-28T02:36:26.943Z",
+  "actorId": "USR-002",
+  "actorName": "Vijay Kumar",
+  "source": "dashboard",
+  "summary": "Created invoice INV/2526/0006 for booking B003",
+  "details": {
+    "bookingId": "B003",
+    "customerName": "Manish Kumar",
+    "grandTotal": 78750,
+    "paymentStatus": "unpaid"
+  }
+}

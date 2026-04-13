@@ -1,0 +1,16 @@
+{
+  "id": "AUD033",
+  "action": "update",
+  "entity": "booking",
+  "entityId": "B004",
+  "timestamp": "2026-04-01T23:42:00.448Z",
+  "actorId": "USR-002",
+  "actorName": "Vijay Kumar",
+  "source": "dashboard",
+  "summary": "Updated booking B004",
+  "details": {
+    "previousStatus": "confirmed",
+    "newStatus": "confirmed",
+    "cancellationNote": ""
+  }
+}

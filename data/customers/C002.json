@@ -1,0 +1,22 @@
+{
+  "id": "C002",
+  "name": "Rajeev Kumar Pal",
+  "phone": "(620) 245-3881",
+  "email": "",
+  "address": "Baidanath Nagar, Nautan",
+  "birthday": "",
+  "profession": "",
+  "bookingIds": [
+    "B002"
+  ],
+  "inquiryIds": [],
+  "eventTypes": [
+    "Wedding"
+  ],
+  "anniversaryDate": "",
+  "tags": [],
+  "totalSpent": 74655,
+  "notes": "",
+  "createdAt": "2026-03-28T02:29:20.441Z",
+  "updatedAt": "2026-03-28T02:29:20.441Z"
+}

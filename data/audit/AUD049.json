@@ -1,0 +1,15 @@
+{
+  "id": "AUD049",
+  "action": "update",
+  "entity": "user",
+  "entityId": "USR-003",
+  "timestamp": "2026-04-02T21:17:41.688Z",
+  "actorId": "USR-002",
+  "actorName": "Vijay Kumar",
+  "source": "dashboard",
+  "summary": "Updated user tiwari",
+  "details": {
+    "role": "manager",
+    "active": true
+  }
+}

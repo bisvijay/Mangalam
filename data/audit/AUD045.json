@@ -1,0 +1,17 @@
+{
+  "id": "AUD045",
+  "action": "create",
+  "entity": "inquiry",
+  "entityId": "INQ001",
+  "timestamp": "2026-04-02T20:58:12.936Z",
+  "actorId": "::1",
+  "actorName": "Website Visitor",
+  "source": "public",
+  "summary": "Public inquiry submitted by Vijay Kumar",
+  "details": {
+    "eventType": "Engagement",
+    "preferredDate": "2026-11-19",
+    "guestsEstimate": 100,
+    "phone": "09211362777"
+  }
+}

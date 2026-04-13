@@ -1,0 +1,46 @@
+[
+  {
+    "id": "H-01",
+    "floor": "ground",
+    "name": "Mangalam Grand Hall",
+    "type": "Indoor",
+    "capacity": 500,
+    "rate": 50000,
+    "sqft": 5000,
+    "features": ["Stage", "AC", "Sound System", "LED Lighting", "Bridal Room"],
+    "available": true
+  },
+  {
+    "id": "H-02",
+    "floor": 1,
+    "name": "Celebration Hall",
+    "type": "Indoor",
+    "capacity": 300,
+    "rate": 35000,
+    "sqft": 3000,
+    "features": ["Stage", "AC", "Sound System", "LED Lighting"],
+    "available": true
+  },
+  {
+    "id": "H-03",
+    "floor": 2,
+    "name": "Royal Hall",
+    "type": "Indoor",
+    "capacity": 200,
+    "rate": 25000,
+    "sqft": 2000,
+    "features": ["AC", "Sound System", "Projector"],
+    "available": true
+  },
+  {
+    "id": "H-04",
+    "floor": "ground",
+    "name": "Mangalam Lawn",
+    "type": "Outdoor",
+    "capacity": 1000,
+    "rate": 75000,
+    "sqft": 50000,
+    "features": ["Open Air", "Tent Setup", "Parking", "Generator Backup", "Catering Space"],
+    "available": true
+  }
+]

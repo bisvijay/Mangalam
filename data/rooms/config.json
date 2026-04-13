@@ -1,0 +1,20 @@
+[
+  { "id": "R-G01", "floor": 0, "name": "Room G-1", "type": "Standard", "ac": false, "rate": 999, "capacity": 2, "available": true },
+  { "id": "R-G02", "floor": 0, "name": "Room G-2", "type": "Standard", "ac": false, "rate": 999, "capacity": 2, "available": true },
+  { "id": "R-101", "floor": 1, "name": "Room 101", "type": "Standard", "ac": false, "rate": 999, "capacity": 2, "available": true },
+  { "id": "R-102", "floor": 1, "name": "Room 102", "type": "Standard", "ac": false, "rate": 999, "capacity": 2, "available": true },
+  { "id": "R-103", "floor": 1, "name": "Room 103", "type": "Deluxe", "ac": true, "rate": 1500, "capacity": 3, "available": true },
+  { "id": "R-104", "floor": 1, "name": "Room 104", "type": "Deluxe", "ac": true, "rate": 1500, "capacity": 3, "available": true },
+  { "id": "R-105", "floor": 1, "name": "Room 105", "type": "Deluxe", "ac": true, "rate": 2000, "capacity": 3, "available": true },
+  { "id": "R-106", "floor": 1, "name": "Room 106", "type": "Deluxe", "ac": true, "rate": 2000, "capacity": 3, "available": true },
+  { "id": "R-201", "floor": 2, "name": "Room 201", "type": "Standard", "ac": false, "rate": 999, "capacity": 2, "available": true },
+  { "id": "R-202", "floor": 2, "name": "Room 202", "type": "Standard", "ac": false, "rate": 999, "capacity": 2, "available": true },
+  { "id": "R-203", "floor": 2, "name": "Room 203", "type": "Standard", "ac": false, "rate": 999, "capacity": 2, "available": true },
+  { "id": "R-204", "floor": 2, "name": "Room 204", "type": "Standard", "ac": false, "rate": 999, "capacity": 2, "available": true },
+  { "id": "R-205", "floor": 2, "name": "Room 205", "type": "Deluxe", "ac": true, "rate": 1500, "capacity": 3, "available": true },
+  { "id": "R-206", "floor": 2, "name": "Room 206", "type": "Deluxe", "ac": true, "rate": 1500, "capacity": 3, "available": true },
+  { "id": "R-207", "floor": 2, "name": "Room 207", "type": "Deluxe", "ac": true, "rate": 2000, "capacity": 3, "available": true },
+  { "id": "R-208", "floor": 2, "name": "Room 208", "type": "Deluxe", "ac": true, "rate": 2000, "capacity": 3, "available": true },
+  { "id": "R-209", "floor": 2, "name": "Room 209", "type": "Deluxe", "ac": true, "rate": 2500, "capacity": 4, "available": true },
+  { "id": "R-210", "floor": 2, "name": "Room 210", "type": "Deluxe", "ac": true, "rate": 2500, "capacity": 4, "available": true }
+]

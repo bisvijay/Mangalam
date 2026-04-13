@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "id": "USR-001",
+      "username": "admin",
+      "name": "Administrator",
+      "role": "admin",
+      "passwordHash": "$2b$10$zFM/tpnD8azlNR4D2Y4rYObWiSyKA4.GI9QVCQvFv1UQmpzTyxwJu",
+      "active": true,
+      "createdAt": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "USR-002",
+      "username": "bis.vijay",
+      "name": "Vijay Kumar",
+      "role": "admin",
+      "passwordHash": "$2b$10$6fAcFmF1vfgrMAARI7dAteZ4/0salrwcJXthu.MciPEe522oJ0wFy",
+      "active": true,
+      "createdAt": "2026-03-28T00:49:55.908Z"
+    },
+    {
+      "id": "USR-003",
+      "username": "tiwari",
+      "name": "Tiwari",
+      "role": "manager",
+      "passwordHash": "$2b$10$za28K7xeJmsUjyFG30bKreYkOvr4Grictj.fj02AupYe9gfWXpvBe",
+      "active": true,
+      "createdAt": "2026-04-02T21:16:55.993Z"
+    }
+  ]
+}

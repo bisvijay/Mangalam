@@ -1,0 +1,16 @@
+{
+  "id": "AUD005",
+  "action": "create",
+  "entity": "booking",
+  "entityId": "B003",
+  "timestamp": "2026-03-28T02:36:07.402Z",
+  "actorId": "USR-002",
+  "actorName": "Vijay Kumar",
+  "source": "dashboard",
+  "summary": "Created booking B003 for Manish Kumar",
+  "details": {
+    "status": "confirmed",
+    "eventDate": "2026-03-09",
+    "grandTotal": 78750
+  }
+}

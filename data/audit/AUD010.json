@@ -1,0 +1,17 @@
+{
+  "id": "AUD010",
+  "action": "create",
+  "entity": "invoice",
+  "entityId": "INV/2526/0008",
+  "timestamp": "2026-03-28T02:40:10.739Z",
+  "actorId": "USR-002",
+  "actorName": "Vijay Kumar",
+  "source": "dashboard",
+  "summary": "Created invoice INV/2526/0008 for booking B005",
+  "details": {
+    "bookingId": "B005",
+    "customerName": "Surender Prasad",
+    "grandTotal": 17982,
+    "paymentStatus": "paid"
+  }
+}

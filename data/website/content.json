@@ -1,0 +1,96 @@
+{
+  "hero": {
+    "title": "Mangalam Banquet Hall & Hotel",
+    "subtitle": "Where every celebration becomes a cherished memory. Premium banquet halls and comfortable rooms in the heart of Bettiah.",
+    "backgroundImage": "/images/hero-bg.jpg"
+  },
+  "about": "Mangalam Banquet Hall & Hotel is Bettiah's premier destination for weddings, receptions, conferences, and celebrations. With elegant indoor halls, a sprawling outdoor lawn, and 18 well-appointed rooms, we bring together comfort and grandeur under one roof. Our dedicated team ensures every event is flawless — from intimate gatherings to grand weddings with over 1,000 guests.",
+  "amenities": [
+    "4 banquet halls (200-1000 capacity)",
+    "18 rooms across 3 floors",
+    "50,000 sq ft outdoor lawn",
+    "In-house kitchen & catering",
+    "AC & non-AC options",
+    "Professional sound & lighting",
+    "Bridal preparation rooms",
+    "Ample parking space",
+    "Generator backup",
+    "24/7 security & CCTV"
+  ],
+  "eventTypes": [
+    {
+      "name": "Weddings & Receptions",
+      "description": "Create the wedding of your dreams in our beautifully decorated halls or under the stars in our grand lawn. We handle everything from décor to catering.",
+      "image": "/images/wedding.jpg",
+      "features": [
+        "Customizable décor",
+        "Bridal suite",
+        "Catering services",
+        "DJ & lighting"
+      ]
+    },
+    {
+      "name": "Corporate Events",
+      "description": "Host professional conferences, seminars, and corporate gatherings in our well-equipped halls with modern amenities.",
+      "image": "/images/corporate.jpg",
+      "features": [
+        "Projector & screen",
+        "Wi-Fi",
+        "Podium & mic",
+        "Breakout rooms"
+      ]
+    },
+    {
+      "name": "Birthday & Anniversaries",
+      "description": "Celebrate milestones with your loved ones in our intimate yet spacious venues, perfect for parties of all sizes.",
+      "image": "/images/birthday.jpg",
+      "features": [
+        "Theme décor",
+        "Cake arrangements",
+        "Music & DJ",
+        "Photography setup"
+      ]
+    },
+    {
+      "name": "Social Gatherings",
+      "description": "From religious ceremonies to community events, our versatile halls adapt to every occasion with ease.",
+      "image": "/images/social.jpg",
+      "features": [
+        "Flexible seating",
+        "Catering options",
+        "PA system",
+        "Parking"
+      ]
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Rajesh Kumar",
+      "eventType": "Wedding Reception",
+      "date": "2024-12-15",
+      "text": "Mangalam made our daughter's wedding reception absolutely perfect. The Grand Hall was beautifully decorated and the staff was incredibly attentive.",
+      "rating": 5
+    },
+    {
+      "name": "Priya Sharma",
+      "eventType": "Corporate Seminar",
+      "date": "2024-11-20",
+      "text": "Excellent venue for our annual company seminar. The Royal Hall had all the amenities we needed. Very professional service.",
+      "rating": 4
+    },
+    {
+      "name": "Amit Verma",
+      "eventType": "Birthday Party",
+      "date": "2025-01-10",
+      "text": "Hosted my son's first birthday here. The Celebration Hall was perfect for our 200 guests. Great food and friendly staff!",
+      "rating": 5
+    }
+  ],
+  "contactInfo": {
+    "phone": "83839 81280",
+    "email": "mangalambettiah@gmail.com",
+    "address": "Ward No 37, Bettiah, West Champaran, Bihar - 845438",
+    "googleMapsEmbed": ""
+  },
+  "footerText": ""
+}

@@ -1,0 +1,22 @@
+{
+  "id": "INQ001",
+  "source": "website",
+  "submittedAt": "2026-04-02T20:58:12.926Z",
+  "name": "Vijay Kumar",
+  "phone": "09211362777",
+  "email": "bis.vijay@gmail.com",
+  "eventType": "Engagement",
+  "preferredDate": "2026-11-19",
+  "guestsEstimate": 100,
+  "hallPreference": "H-02",
+  "roomsNeeded": true,
+  "message": "",
+  "status": "new",
+  "followUps": [],
+  "quotedAmount": 0,
+  "convertedToBookingId": "",
+  "lostReason": "",
+  "assignedTo": "admin",
+  "createdAt": "2026-04-02T20:58:12.926Z",
+  "updatedAt": "2026-04-02T21:02:22.581Z"
+}

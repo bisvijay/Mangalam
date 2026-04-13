@@ -1,0 +1,15 @@
+{
+  "id": "AUD048",
+  "action": "create",
+  "entity": "user",
+  "entityId": "USR-003",
+  "timestamp": "2026-04-02T21:16:55.997Z",
+  "actorId": "USR-002",
+  "actorName": "Vijay Kumar",
+  "source": "dashboard",
+  "summary": "Created user Tiwari Ji",
+  "details": {
+    "role": "manager",
+    "active": true
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "businessName": "Mangalam Banquet & Hotel",
+  "gstin": "10ANSPD0701C1ZY",
+  "address": "Ward No 37",
+  "phone": "83839 81280",
+  "email": "",
+  "stateCode": "10",
+  "state": "Bihar",
+  "gstSlabs": [
+    {
+      "minRate": 0,
+      "maxRate": 999,
+      "gstPercent": 0,
+      "itcEligible": false,
+      "label": "Exempt (up to ₹999)"
+    },
+    {
+      "minRate": 1000,
+      "maxRate": 7500,
+      "gstPercent": 5,
+      "itcEligible": false,
+      "label": "5% GST (₹1,000 - ₹7,500)"
+    },
+    {
+      "minRate": 7501,
+      "maxRate": 999999,
+      "gstPercent": 18,
+      "itcEligible": true,
+      "label": "18% GST (above ₹7,500)"
+    }
+  ],
+  "defaultRoomRate": 1500,
+  "defaultTerms": "1. Advance booking amount is non-refundable.\n2. Full payment must be made before checkout.\n3. Check-in: 12:00 PM, Check-out: 11:00 AM.\n4. Hall booking includes setup and cleanup time.\n5. Outside catering is allowed with prior permission.\n6. Management is not responsible for loss of valuables.\n7. Any damage to property will be charged separately.",
+  "panNumber": "ANSPD0701C",
+  "city": "Bettiah",
+  "pincode": "845438"
+}

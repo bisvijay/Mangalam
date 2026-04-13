@@ -1,0 +1,64 @@
+{
+  "bookingDate": "2025-10-05",
+  "eventDate": "2026-02-25",
+  "eventEndDate": "2026-02-26",
+  "eventType": "Wedding",
+  "status": "confirmed",
+  "customer": {
+    "name": "Rajeev Kumar Pal",
+    "phone": "(620) 245-3881",
+    "email": "",
+    "address": "Baidanath Nagar, Nautan"
+  },
+  "eventDetails": {
+    "brideName": "",
+    "brideDOB": "",
+    "groomName": "",
+    "groomDOB": ""
+  },
+  "venue": {
+    "hallId": "H-01",
+    "roomsBooked": 18,
+    "guestsCount": 200
+  },
+  "charges": {
+    "roomRate": 3950,
+    "roomNights": 1,
+    "roomTotal": 71100,
+    "hallCharge": 0,
+    "decorationCharge": 0,
+    "cateringCharge": 0,
+    "otherCharges": 0,
+    "subtotal": 71100,
+    "gstBreakdown": [
+      {
+        "item": "5% GST (₹1,000 - ₹7,500)",
+        "taxable": 71100,
+        "rate": 5,
+        "cgst": 1777.5,
+        "sgst": 1777.5,
+        "igst": 0
+      }
+    ],
+    "totalGST": 3555,
+    "grandTotal": 74655
+  },
+  "payments": [
+    {
+      "date": "2026-03-28",
+      "amount": 74655,
+      "method": "cash",
+      "receipt": ""
+    }
+  ],
+  "advance": 74655,
+  "balance": 0,
+  "paymentStatus": "paid",
+  "invoiceId": "INV/2526/0003",
+  "notes": "",
+  "id": "B002",
+  "createdAt": "2025-10-05T11:29:20.419Z",
+  "updatedAt": "2026-03-28T16:55:55.574Z",
+  "createdBy": "bis.vijay",
+  "cancellationNote": ""
+}

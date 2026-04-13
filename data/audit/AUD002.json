@@ -1,0 +1,17 @@
+{
+  "id": "AUD002",
+  "action": "create",
+  "entity": "invoice",
+  "entityId": "INV/2526/0003",
+  "timestamp": "2026-03-28T02:29:31.675Z",
+  "actorId": "USR-002",
+  "actorName": "Vijay Kumar",
+  "source": "dashboard",
+  "summary": "Created invoice INV/2526/0003 for booking B002",
+  "details": {
+    "bookingId": "B002",
+    "customerName": "Rajeev Kumar Pal",
+    "grandTotal": 74655,
+    "paymentStatus": "partial"
+  }
+}

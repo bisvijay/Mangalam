@@ -1,0 +1,51 @@
+[
+  {
+    "id": "C001",
+    "name": "Prem Kumar",
+    "phone": "(700) 432-4640",
+    "email": "",
+    "tags": [],
+    "totalSpent": 48195,
+    "bookingCount": 1
+  },
+  {
+    "id": "C002",
+    "name": "Rajeev Kumar Pal",
+    "phone": "(620) 245-3881",
+    "email": "",
+    "profession": "",
+    "tags": [],
+    "totalSpent": 74655,
+    "bookingCount": 1
+  },
+  {
+    "id": "C003",
+    "name": "Manish Kumar",
+    "phone": "(707) 089-0890",
+    "email": "",
+    "profession": "",
+    "tags": [],
+    "totalSpent": 78750,
+    "bookingCount": 1
+  },
+  {
+    "id": "C004",
+    "name": "Namesh Prasad",
+    "phone": "(940) 962-6259",
+    "email": "",
+    "profession": "",
+    "tags": [],
+    "totalSpent": 18900,
+    "bookingCount": 1
+  },
+  {
+    "id": "C005",
+    "name": "Surender Prasad",
+    "phone": "(993) 163-4673",
+    "email": "",
+    "profession": "",
+    "tags": [],
+    "totalSpent": 17982,
+    "bookingCount": 1
+  }
+]

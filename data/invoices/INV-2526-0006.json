@@ -1,0 +1,80 @@
+{
+  "id": "INV/2526/0006",
+  "bookingId": "B003",
+  "invoiceDate": "2026-03-09",
+  "invoiceType": "tax_invoice",
+  "financialYear": "2526",
+  "sequenceNo": 6,
+  "seller": {
+    "name": "Mangalam Banquet Hall & Hotel",
+    "gstin": "10ANSPD0701C1ZY",
+    "address": "Ward No 37, Bettiah, West Champaran, Bihar - 845438",
+    "phone": "83839 81280",
+    "stateCode": "10",
+    "state": "Bihar"
+  },
+  "buyer": {
+    "name": "Manish Kumar",
+    "phone": "(707) 089-0890",
+    "email": "",
+    "address": "Dumari Mahanwa",
+    "gstin": "",
+    "stateCode": "10",
+    "state": "Bihar"
+  },
+  "lineItems": [
+    {
+      "sno": 1,
+      "description": "Room Accommodation (15 rooms × 1 nights @ ₹5000/night)",
+      "sacCode": "996311",
+      "qty": 15,
+      "rate": 5000,
+      "amount": 75000,
+      "gstRate": 5,
+      "cgst": 1875,
+      "sgst": 1875,
+      "igst": 0,
+      "total": 78750
+    }
+  ],
+  "summary": {
+    "subtotal": 75000,
+    "totalCGST": 1875,
+    "totalSGST": 1875,
+    "totalIGST": 0,
+    "totalGST": 3750,
+    "grandTotal": 78750,
+    "roundOff": 0,
+    "grandTotalRounded": 78750,
+    "amountInWords": "Rupees Seventy Eight Thousand Seven Hundred and Fifty Only"
+  },
+  "gstSummary": [
+    {
+      "rate": 5,
+      "taxableValue": 75000,
+      "cgst": 1875,
+      "sgst": 1875,
+      "igst": 0,
+      "total": 3750
+    }
+  ],
+  "payments": [
+    {
+      "date": "2025-11-17",
+      "amount": 78750,
+      "method": "cash",
+      "reference": ""
+    }
+  ],
+  "totalPaid": 78750,
+  "balanceDue": 0,
+  "paymentStatus": "paid",
+  "isActive": true,
+  "notes": "",
+  "termsAndConditions": "1. Payment is due within 7 days of invoice date.\n2. All disputes are subject to Bettiah, Bihar jurisdiction.",
+  "isSupplyIntraState": true,
+  "placeOfSupply": "Bihar (10)",
+  "createdAt": "2025-12-14T11:00:00.000Z",
+  "createdBy": "Vijay Kumar",
+  "bookedForDate": "2026-03-09"
+}

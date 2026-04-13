@@ -1,0 +1,22 @@
+{
+  "id": "C003",
+  "name": "Manish Kumar",
+  "phone": "(707) 089-0890",
+  "email": "",
+  "address": "Dumari Mahanwa",
+  "birthday": "",
+  "profession": "",
+  "bookingIds": [
+    "B003"
+  ],
+  "inquiryIds": [],
+  "eventTypes": [
+    "Wedding"
+  ],
+  "anniversaryDate": "",
+  "tags": [],
+  "totalSpent": 78750,
+  "notes": "",
+  "createdAt": "2026-03-28T02:36:07.373Z",
+  "updatedAt": "2026-03-28T02:36:07.373Z"
+}

@@ -1,0 +1,86 @@
+{
+  "id": "INV/2526/0001",
+  "bookingId": "B001",
+  "invoiceDate": "2026-02-08",
+  "invoiceType": "tax_invoice",
+  "financialYear": "2526",
+  "sequenceNo": 1,
+  "seller": {
+    "name": "Mangalam Banquet Hall & Hotel",
+    "gstin": "10ANSPD0701C1ZY",
+    "address": "Ward No 37, Bettiah, West Champaran, Bihar - 845438",
+    "phone": "83839 81280",
+    "stateCode": "10",
+    "state": "Bihar"
+  },
+  "buyer": {
+    "name": "Prem Kumar",
+    "phone": "(700) 432-4640",
+    "email": "",
+    "address": "Banurra, Nautan",
+    "gstin": "",
+    "stateCode": "10",
+    "state": "Bihar"
+  },
+  "lineItems": [
+    {
+      "sno": 1,
+      "description": "Room Accommodation (18 rooms × 1 nights @ ₹2551/night)",
+      "sacCode": "996311",
+      "qty": 18,
+      "rate": 2551,
+      "amount": 45918,
+      "gstRate": 5,
+      "cgst": 1147.95,
+      "sgst": 1147.95,
+      "igst": 0,
+      "total": 48213.9
+    }
+  ],
+  "summary": {
+    "subtotal": 45918,
+    "totalCGST": 1147.95,
+    "totalSGST": 1147.95,
+    "totalIGST": 0,
+    "totalGST": 2295.9,
+    "grandTotal": 48213.9,
+    "roundOff": 0.1,
+    "grandTotalRounded": 48214,
+    "amountInWords": "Rupees Forty Eight Thousand Two Hundred and Fourteen Only"
+  },
+  "gstSummary": [
+    {
+      "rate": 5,
+      "taxableValue": 45918,
+      "cgst": 1147.95,
+      "sgst": 1147.95,
+      "igst": 0,
+      "total": 2295.9
+    }
+  ],
+  "payments": [
+    {
+      "date": "2025-09-22",
+      "amount": 25000,
+      "method": "cash",
+      "reference": ""
+    },
+    {
+      "date": "2025-10-18",
+      "amount": 23214,
+      "method": "cash",
+      "reference": ""
+    }
+  ],
+  "totalPaid": 48214,
+  "balanceDue": 0,
+  "paymentStatus": "paid",
+  "isActive": true,
+  "notes": "",
+  "termsAndConditions": "1. Payment is due within 7 days of invoice date.\n2. All disputes are subject to Bettiah, Bihar jurisdiction.",
+  "isSupplyIntraState": true,
+  "placeOfSupply": "Bihar (10)",
+  "createdAt": "2025-10-18T11:00:00.000Z",
+  "createdBy": "Administrator",
+  "bookedForDate": "2026-02-08"
+}

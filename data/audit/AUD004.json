@@ -1,0 +1,17 @@
+{
+  "id": "AUD004",
+  "action": "payment",
+  "entity": "invoice",
+  "entityId": "INV/2526/0001",
+  "timestamp": "2026-03-28T02:32:16.296Z",
+  "actorId": "USR-002",
+  "actorName": "Vijay Kumar",
+  "source": "dashboard",
+  "summary": "Added payment on invoice INV/2526/0001",
+  "details": {
+    "paymentDate": "2026-03-28",
+    "paymentAmount": 23214,
+    "method": "cash",
+    "balanceDue": 0
+  }
+}

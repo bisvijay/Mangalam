@@ -1,0 +1,86 @@
+{
+  "id": "INV/2526/0003",
+  "bookingId": "B002",
+  "invoiceDate": "2026-02-25",
+  "invoiceType": "tax_invoice",
+  "financialYear": "2526",
+  "sequenceNo": 3,
+  "seller": {
+    "name": "Mangalam Banquet Hall & Hotel",
+    "gstin": "10ANSPD0701C1ZY",
+    "address": "Ward No 37, Bettiah, West Champaran, Bihar - 845438",
+    "phone": "83839 81280",
+    "stateCode": "10",
+    "state": "Bihar"
+  },
+  "buyer": {
+    "name": "Rajeev Kumar Pal",
+    "phone": "(620) 245-3881",
+    "email": "",
+    "address": "Baidanath Nagar, Nautan",
+    "gstin": "",
+    "stateCode": "10",
+    "state": "Bihar"
+  },
+  "lineItems": [
+    {
+      "sno": 1,
+      "description": "Room Accommodation (18 rooms × 1 nights @ ₹3950/night)",
+      "sacCode": "996311",
+      "qty": 18,
+      "rate": 3950,
+      "amount": 71100,
+      "gstRate": 5,
+      "cgst": 1777.5,
+      "sgst": 1777.5,
+      "igst": 0,
+      "total": 74655
+    }
+  ],
+  "summary": {
+    "subtotal": 71100,
+    "totalCGST": 1777.5,
+    "totalSGST": 1777.5,
+    "totalIGST": 0,
+    "totalGST": 3555,
+    "grandTotal": 74655,
+    "roundOff": 0,
+    "grandTotalRounded": 74655,
+    "amountInWords": "Rupees Seventy Four Thousand Six Hundred and Fifty Five Only"
+  },
+  "gstSummary": [
+    {
+      "rate": 5,
+      "taxableValue": 71100,
+      "cgst": 1777.5,
+      "sgst": 1777.5,
+      "igst": 0,
+      "total": 3555
+    }
+  ],
+  "payments": [
+    {
+      "date": "2025-10-05",
+      "amount": 25000,
+      "method": "cash",
+      "reference": ""
+    },
+    {
+      "date": "2025-11-07",
+      "amount": 49655,
+      "method": "cash",
+      "reference": ""
+    }
+  ],
+  "totalPaid": 74655,
+  "balanceDue": 0,
+  "paymentStatus": "paid",
+  "isActive": true,
+  "notes": "",
+  "termsAndConditions": "1. Payment is due within 7 days of invoice date.\n2. All disputes are subject to Bettiah, Bihar jurisdiction.",
+  "isSupplyIntraState": true,
+  "placeOfSupply": "Bihar (10)",
+  "createdAt": "2025-11-07T11:00:00.000Z",
+  "createdBy": "Vijay Kumar",
+  "bookedForDate": "2026-02-25"
+}

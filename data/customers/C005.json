@@ -1,0 +1,22 @@
+{
+  "id": "C005",
+  "name": "Surender Prasad",
+  "phone": "(993) 163-4673",
+  "email": "",
+  "address": "DhumNagar",
+  "birthday": "",
+  "profession": "",
+  "bookingIds": [
+    "B005"
+  ],
+  "inquiryIds": [],
+  "eventTypes": [
+    "Engagement"
+  ],
+  "anniversaryDate": "",
+  "tags": [],
+  "totalSpent": 17982,
+  "notes": "",
+  "createdAt": "2026-03-28T02:40:07.211Z",
+  "updatedAt": "2026-03-28T02:40:07.211Z"
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "B001",
+    "eventDate": "2026-02-08",
+    "eventType": "Wedding",
+    "status": "confirmed",
+    "customerName": "Prem Kumar",
+    "customerPhone": "(700) 432-4640",
+    "hallId": "H-01",
+    "grandTotal": 48213.9,
+    "totalPaid": 48214,
+    "balanceDue": -0.09999999999854481,
+    "paymentStatus": "paid"
+  },
+  {
+    "id": "B002",
+    "eventDate": "2026-02-25",
+    "eventType": "Wedding",
+    "status": "confirmed",
+    "customerName": "Rajeev Kumar Pal",
+    "customerPhone": "(620) 245-3881",
+    "hallId": "H-01",
+    "grandTotal": 74655,
+    "totalPaid": 74655,
+    "balanceDue": 0,
+    "paymentStatus": "paid"
+  },
+  {
+    "id": "B003",
+    "eventDate": "2026-03-09",
+    "eventType": "Wedding",
+    "status": "confirmed",
+    "customerName": "Manish Kumar",
+    "customerPhone": "(707) 089-0890",
+    "hallId": "H-01",
+    "grandTotal": 78750,
+    "totalPaid": 78750,
+    "balanceDue": 0,
+    "paymentStatus": "paid"
+  },
+  {
+    "id": "B004",
+    "eventDate": "2026-03-11",
+    "eventType": "Engagement",
+    "status": "confirmed",
+    "customerName": "Namesh Prasad",
+    "customerPhone": "(940) 962-6259",
+    "hallId": "H-01",
+    "grandTotal": 17982,
+    "totalPaid": 17982,
+    "balanceDue": 0,
+    "paymentStatus": "paid"
+  },
+  {
+    "id": "B005",
+    "eventDate": "2026-03-14",
+    "eventType": "Engagement",
+    "status": "confirmed",
+    "customerName": "Surender Prasad",
+    "customerPhone": "(993) 163-4673",
+    "hallId": "H-01",
+    "grandTotal": 17982,
+    "totalPaid": 17982,
+    "balanceDue": 0,
+    "paymentStatus": "paid"
+  }
+]

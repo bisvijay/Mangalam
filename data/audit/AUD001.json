@@ -1,0 +1,16 @@
+{
+  "id": "AUD001",
+  "action": "create",
+  "entity": "booking",
+  "entityId": "B002",
+  "timestamp": "2026-03-28T02:29:20.459Z",
+  "actorId": "USR-002",
+  "actorName": "Vijay Kumar",
+  "source": "dashboard",
+  "summary": "Created booking B002 for Rajeev Kumar Pal",
+  "details": {
+    "status": "confirmed",
+    "eventDate": "2026-02-25",
+    "grandTotal": 74655
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "AUD027",
+  "action": "sync",
+  "entity": "invoice",
+  "entityId": "INV/2526/0003",
+  "timestamp": "2026-03-28T16:58:03.401Z",
+  "actorId": "USR-002",
+  "actorName": "Vijay Kumar",
+  "source": "dashboard",
+  "summary": "Synced invoice INV/2526/0003 from booking B002",
+  "details": {
+    "bookingId": "B002",
+    "grandTotal": 74655,
+    "totalPaid": 74655,
+    "balanceDue": 0
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "bookingDate": "2025-09-22",
+  "eventDate": "2026-02-08",
+  "eventEndDate": "2026-02-09",
+  "eventType": "Wedding",
+  "status": "confirmed",
+  "customer": {
+    "name": "Prem Kumar",
+    "phone": "(700) 432-4640",
+    "email": "",
+    "address": "Banurra, Nautan"
+  },
+  "eventDetails": {
+    "brideName": "",
+    "brideDOB": "",
+    "groomName": "",
+    "groomDOB": ""
+  },
+  "venue": {
+    "hallId": "H-01",
+    "roomsBooked": 18,
+    "guestsCount": 200
+  },
+  "charges": {
+    "roomRate": 2551,
+    "roomNights": 1,
+    "roomTotal": 45918,
+    "hallCharge": 0,
+    "decorationCharge": 0,
+    "cateringCharge": 0,
+    "otherCharges": 0,
+    "subtotal": 45918,
+    "gstBreakdown": [
+      {
+        "item": "5% GST (₹1,000 - ₹7,500)",
+        "taxable": 45918,
+        "rate": 5,
+        "cgst": 1147.95,
+        "sgst": 1147.95,
+        "igst": 0
+      }
+    ],
+    "totalGST": 2295.9,
+    "grandTotal": 48213.9
+  },
+  "payments": [
+    {
+      "date": "2026-03-28",
+      "amount": 48214,
+      "method": "cash",
+      "receipt": ""
+    }
+  ],
+  "advance": 48214,
+  "balance": -0.09999999999854481,
+  "paymentStatus": "paid",
+  "invoiceId": "INV/2526/0001",
+  "notes": "Decoration included",
+  "id": "B001",
+  "createdAt": "2025-09-22T10:15:47.947Z",
+  "updatedAt": "2026-03-28T16:55:02.482Z",
+  "createdBy": "admin",
+  "cancellationNote": ""
+}

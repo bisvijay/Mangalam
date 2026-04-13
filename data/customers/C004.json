@@ -1,0 +1,22 @@
+{
+  "id": "C004",
+  "name": "Namesh Prasad",
+  "phone": "(940) 962-6259",
+  "email": "",
+  "address": "Harivatika",
+  "birthday": "",
+  "profession": "",
+  "bookingIds": [
+    "B004"
+  ],
+  "inquiryIds": [],
+  "eventTypes": [
+    "Engagement"
+  ],
+  "anniversaryDate": "",
+  "tags": [],
+  "totalSpent": 18900,
+  "notes": "",
+  "createdAt": "2026-03-28T02:38:28.822Z",
+  "updatedAt": "2026-03-28T02:38:28.822Z"
+}

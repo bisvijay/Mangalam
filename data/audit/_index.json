@@ -1,0 +1,911 @@
+[
+  {
+    "id": "AUD001",
+    "action": "create",
+    "entity": "booking",
+    "entityId": "B002",
+    "timestamp": "2026-03-28T02:29:20.459Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Created booking B002 for Rajeev Kumar Pal",
+    "details": {
+      "status": "confirmed",
+      "eventDate": "2026-02-25",
+      "grandTotal": 74655
+    }
+  },
+  {
+    "id": "AUD002",
+    "action": "create",
+    "entity": "invoice",
+    "entityId": "INV/2526/0003",
+    "timestamp": "2026-03-28T02:29:31.675Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Created invoice INV/2526/0003 for booking B002",
+    "details": {
+      "bookingId": "B002",
+      "customerName": "Rajeev Kumar Pal",
+      "grandTotal": 74655,
+      "paymentStatus": "partial"
+    }
+  },
+  {
+    "id": "AUD003",
+    "action": "payment",
+    "entity": "invoice",
+    "entityId": "INV/2526/0003",
+    "timestamp": "2026-03-28T02:29:53.038Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Added payment on invoice INV/2526/0003",
+    "details": {
+      "paymentDate": "2026-03-28",
+      "paymentAmount": 49655,
+      "method": "cash",
+      "balanceDue": 0
+    }
+  },
+  {
+    "id": "AUD004",
+    "action": "payment",
+    "entity": "invoice",
+    "entityId": "INV/2526/0001",
+    "timestamp": "2026-03-28T02:32:16.296Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Added payment on invoice INV/2526/0001",
+    "details": {
+      "paymentDate": "2026-03-28",
+      "paymentAmount": 23214,
+      "method": "cash",
+      "balanceDue": 0
+    }
+  },
+  {
+    "id": "AUD005",
+    "action": "create",
+    "entity": "booking",
+    "entityId": "B003",
+    "timestamp": "2026-03-28T02:36:07.402Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Created booking B003 for Manish Kumar",
+    "details": {
+      "status": "confirmed",
+      "eventDate": "2026-03-09",
+      "grandTotal": 78750
+    }
+  },
+  {
+    "id": "AUD006",
+    "action": "create",
+    "entity": "invoice",
+    "entityId": "INV/2526/0006",
+    "timestamp": "2026-03-28T02:36:26.943Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Created invoice INV/2526/0006 for booking B003",
+    "details": {
+      "bookingId": "B003",
+      "customerName": "Manish Kumar",
+      "grandTotal": 78750,
+      "paymentStatus": "unpaid"
+    }
+  },
+  {
+    "id": "AUD007",
+    "action": "create",
+    "entity": "booking",
+    "entityId": "B004",
+    "timestamp": "2026-03-28T02:38:28.848Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Created booking B004 for Namesh Prasad",
+    "details": {
+      "status": "confirmed",
+      "eventDate": "2026-03-11",
+      "grandTotal": 18900
+    }
+  },
+  {
+    "id": "AUD008",
+    "action": "create",
+    "entity": "invoice",
+    "entityId": "INV/2526/0007",
+    "timestamp": "2026-03-28T02:38:32.590Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Created invoice INV/2526/0007 for booking B004",
+    "details": {
+      "bookingId": "B004",
+      "customerName": "Namesh Prasad",
+      "grandTotal": 18900,
+      "paymentStatus": "paid"
+    }
+  },
+  {
+    "id": "AUD009",
+    "action": "create",
+    "entity": "booking",
+    "entityId": "B005",
+    "timestamp": "2026-03-28T02:40:07.224Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Created booking B005 for Surender Prasad",
+    "details": {
+      "status": "confirmed",
+      "eventDate": "2026-03-14",
+      "grandTotal": 17982
+    }
+  },
+  {
+    "id": "AUD010",
+    "action": "create",
+    "entity": "invoice",
+    "entityId": "INV/2526/0008",
+    "timestamp": "2026-03-28T02:40:10.739Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Created invoice INV/2526/0008 for booking B005",
+    "details": {
+      "bookingId": "B005",
+      "customerName": "Surender Prasad",
+      "grandTotal": 17982,
+      "paymentStatus": "paid"
+    }
+  },
+  {
+    "id": "AUD011",
+    "action": "update",
+    "entity": "booking",
+    "entityId": "B004",
+    "timestamp": "2026-03-28T02:40:32.132Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Updated booking B004",
+    "details": {
+      "previousStatus": "confirmed",
+      "newStatus": "confirmed",
+      "cancellationNote": ""
+    }
+  },
+  {
+    "id": "AUD012",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0007",
+    "timestamp": "2026-03-28T02:40:54.918Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0007 from booking B004",
+    "details": {
+      "bookingId": "B004",
+      "grandTotal": 17982,
+      "totalPaid": 18900,
+      "balanceDue": -918
+    }
+  },
+  {
+    "id": "AUD013",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0007",
+    "timestamp": "2026-03-28T02:41:08.709Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0007 from booking B004",
+    "details": {
+      "bookingId": "B004",
+      "grandTotal": 17982,
+      "totalPaid": 18900,
+      "balanceDue": -918
+    }
+  },
+  {
+    "id": "AUD014",
+    "action": "payment",
+    "entity": "invoice",
+    "entityId": "INV/2526/0006",
+    "timestamp": "2026-03-28T02:42:01.901Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Added payment on invoice INV/2526/0006",
+    "details": {
+      "paymentDate": "2026-03-28",
+      "paymentAmount": 78750,
+      "method": "cash",
+      "balanceDue": 0
+    }
+  },
+  {
+    "id": "AUD015",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0001",
+    "timestamp": "2026-03-28T02:48:10.217Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0001 from booking B001",
+    "details": {
+      "bookingId": "B001",
+      "grandTotal": 48214,
+      "totalPaid": 48214,
+      "balanceDue": 0
+    }
+  },
+  {
+    "id": "AUD016",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0003",
+    "timestamp": "2026-03-28T02:48:17.936Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0003 from booking B002",
+    "details": {
+      "bookingId": "B002",
+      "grandTotal": 74655,
+      "totalPaid": 74655,
+      "balanceDue": 0
+    }
+  },
+  {
+    "id": "AUD017",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0006",
+    "timestamp": "2026-03-28T02:48:27.411Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0006 from booking B003",
+    "details": {
+      "bookingId": "B003",
+      "grandTotal": 78750,
+      "totalPaid": 78750,
+      "balanceDue": 0
+    }
+  },
+  {
+    "id": "AUD018",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0006",
+    "timestamp": "2026-03-28T02:48:36.698Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0006 from booking B003",
+    "details": {
+      "bookingId": "B003",
+      "grandTotal": 78750,
+      "totalPaid": 78750,
+      "balanceDue": 0
+    }
+  },
+  {
+    "id": "AUD019",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0007",
+    "timestamp": "2026-03-28T02:48:43.432Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0007 from booking B004",
+    "details": {
+      "bookingId": "B004",
+      "grandTotal": 17982,
+      "totalPaid": 18900,
+      "balanceDue": -918
+    }
+  },
+  {
+    "id": "AUD020",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0008",
+    "timestamp": "2026-03-28T02:48:50.209Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0008 from booking B005",
+    "details": {
+      "bookingId": "B005",
+      "grandTotal": 17982,
+      "totalPaid": 17982,
+      "balanceDue": 0
+    }
+  },
+  {
+    "id": "AUD021",
+    "action": "update",
+    "entity": "booking",
+    "entityId": "B001",
+    "timestamp": "2026-03-28T16:55:02.510Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Updated booking B001",
+    "details": {
+      "previousStatus": "confirmed",
+      "newStatus": "confirmed",
+      "cancellationNote": ""
+    }
+  },
+  {
+    "id": "AUD022",
+    "action": "update",
+    "entity": "booking",
+    "entityId": "B002",
+    "timestamp": "2026-03-28T16:55:55.603Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Updated booking B002",
+    "details": {
+      "previousStatus": "confirmed",
+      "newStatus": "confirmed",
+      "cancellationNote": ""
+    }
+  },
+  {
+    "id": "AUD023",
+    "action": "update",
+    "entity": "booking",
+    "entityId": "B003",
+    "timestamp": "2026-03-28T16:56:21.323Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Updated booking B003",
+    "details": {
+      "previousStatus": "confirmed",
+      "newStatus": "confirmed",
+      "cancellationNote": ""
+    }
+  },
+  {
+    "id": "AUD024",
+    "action": "update",
+    "entity": "booking",
+    "entityId": "B004",
+    "timestamp": "2026-03-28T16:57:02.937Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Updated booking B004",
+    "details": {
+      "previousStatus": "confirmed",
+      "newStatus": "confirmed",
+      "cancellationNote": ""
+    }
+  },
+  {
+    "id": "AUD025",
+    "action": "update",
+    "entity": "booking",
+    "entityId": "B005",
+    "timestamp": "2026-03-28T16:57:26.078Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Updated booking B005",
+    "details": {
+      "previousStatus": "confirmed",
+      "newStatus": "confirmed",
+      "cancellationNote": ""
+    }
+  },
+  {
+    "id": "AUD026",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0001",
+    "timestamp": "2026-03-28T16:57:49.887Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0001 from booking B001",
+    "details": {
+      "bookingId": "B001",
+      "grandTotal": 48214,
+      "totalPaid": 48214,
+      "balanceDue": 0
+    }
+  },
+  {
+    "id": "AUD027",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0003",
+    "timestamp": "2026-03-28T16:58:03.401Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0003 from booking B002",
+    "details": {
+      "bookingId": "B002",
+      "grandTotal": 74655,
+      "totalPaid": 74655,
+      "balanceDue": 0
+    }
+  },
+  {
+    "id": "AUD028",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0006",
+    "timestamp": "2026-03-28T16:58:09.864Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0006 from booking B003",
+    "details": {
+      "bookingId": "B003",
+      "grandTotal": 78750,
+      "totalPaid": 78750,
+      "balanceDue": 0
+    }
+  },
+  {
+    "id": "AUD029",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0007",
+    "timestamp": "2026-03-28T16:58:17.612Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0007 from booking B004",
+    "details": {
+      "bookingId": "B004",
+      "grandTotal": 17982,
+      "totalPaid": 18900,
+      "balanceDue": -918
+    }
+  },
+  {
+    "id": "AUD030",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0008",
+    "timestamp": "2026-03-28T16:58:23.104Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0008 from booking B005",
+    "details": {
+      "bookingId": "B005",
+      "grandTotal": 17982,
+      "totalPaid": 17982,
+      "balanceDue": 0
+    }
+  },
+  {
+    "id": "AUD031",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0007",
+    "timestamp": "2026-04-01T23:39:59.870Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0007 from booking B004",
+    "details": {
+      "bookingId": "B004",
+      "grandTotal": 17982,
+      "totalPaid": 18900,
+      "balanceDue": -918
+    }
+  },
+  {
+    "id": "AUD032",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0007",
+    "timestamp": "2026-04-01T23:40:51.764Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0007 from booking B004",
+    "details": {
+      "bookingId": "B004",
+      "grandTotal": 17982,
+      "totalPaid": 18900,
+      "balanceDue": -918
+    }
+  },
+  {
+    "id": "AUD033",
+    "action": "update",
+    "entity": "booking",
+    "entityId": "B004",
+    "timestamp": "2026-04-01T23:42:00.448Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Updated booking B004",
+    "details": {
+      "previousStatus": "confirmed",
+      "newStatus": "confirmed",
+      "cancellationNote": ""
+    }
+  },
+  {
+    "id": "AUD034",
+    "action": "update",
+    "entity": "booking",
+    "entityId": "B004",
+    "timestamp": "2026-04-01T23:46:21.283Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Updated booking B004",
+    "details": {
+      "previousStatus": "confirmed",
+      "newStatus": "confirmed",
+      "cancellationNote": ""
+    }
+  },
+  {
+    "id": "AUD035",
+    "action": "update",
+    "entity": "booking",
+    "entityId": "B005",
+    "timestamp": "2026-04-01T23:46:51.059Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Updated booking B005",
+    "details": {
+      "previousStatus": "confirmed",
+      "newStatus": "confirmed",
+      "cancellationNote": ""
+    }
+  },
+  {
+    "id": "AUD036",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0007",
+    "timestamp": "2026-04-01T23:47:07.127Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0007 from booking B004",
+    "details": {
+      "bookingId": "B004",
+      "grandTotal": 17982,
+      "totalPaid": 18900,
+      "balanceDue": -918
+    }
+  },
+  {
+    "id": "AUD037",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0008",
+    "timestamp": "2026-04-01T23:48:08.170Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0008 from booking B005",
+    "details": {
+      "bookingId": "B005",
+      "grandTotal": 17982,
+      "totalPaid": 17982,
+      "balanceDue": 0
+    }
+  },
+  {
+    "id": "AUD038",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0008",
+    "timestamp": "2026-04-01T23:48:29.478Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0008 from booking B005",
+    "details": {
+      "bookingId": "B005",
+      "grandTotal": 17982,
+      "totalPaid": 17982,
+      "balanceDue": 0
+    }
+  },
+  {
+    "id": "AUD039",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0008",
+    "timestamp": "2026-04-01T23:48:30.595Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0008 from booking B005",
+    "details": {
+      "bookingId": "B005",
+      "grandTotal": 17982,
+      "totalPaid": 17982,
+      "balanceDue": 0
+    }
+  },
+  {
+    "id": "AUD040",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0008",
+    "timestamp": "2026-04-01T23:48:30.811Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0008 from booking B005",
+    "details": {
+      "bookingId": "B005",
+      "grandTotal": 17982,
+      "totalPaid": 17982,
+      "balanceDue": 0
+    }
+  },
+  {
+    "id": "AUD041",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0008",
+    "timestamp": "2026-04-01T23:48:31.054Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0008 from booking B005",
+    "details": {
+      "bookingId": "B005",
+      "grandTotal": 17982,
+      "totalPaid": 17982,
+      "balanceDue": 0
+    }
+  },
+  {
+    "id": "AUD042",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0008",
+    "timestamp": "2026-04-01T23:48:31.286Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0008 from booking B005",
+    "details": {
+      "bookingId": "B005",
+      "grandTotal": 17982,
+      "totalPaid": 17982,
+      "balanceDue": 0
+    }
+  },
+  {
+    "id": "AUD043",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0008",
+    "timestamp": "2026-04-01T23:48:31.470Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0008 from booking B005",
+    "details": {
+      "bookingId": "B005",
+      "grandTotal": 17982,
+      "totalPaid": 17982,
+      "balanceDue": 0
+    }
+  },
+  {
+    "id": "AUD044",
+    "action": "sync",
+    "entity": "invoice",
+    "entityId": "INV/2526/0008",
+    "timestamp": "2026-04-01T23:58:52.118Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Synced invoice INV/2526/0008 from booking B005",
+    "details": {
+      "bookingId": "B005",
+      "grandTotal": 17982,
+      "totalPaid": 17982,
+      "balanceDue": 0
+    }
+  },
+  {
+    "id": "AUD045",
+    "action": "create",
+    "entity": "inquiry",
+    "entityId": "INQ001",
+    "timestamp": "2026-04-02T20:58:12.936Z",
+    "actorId": "::1",
+    "actorName": "Website Visitor",
+    "source": "public",
+    "summary": "Public inquiry submitted by Vijay Kumar",
+    "details": {
+      "eventType": "Engagement",
+      "preferredDate": "2026-11-19",
+      "guestsEstimate": 100,
+      "phone": "09211362777"
+    }
+  },
+  {
+    "id": "AUD046",
+    "action": "status-change",
+    "entity": "inquiry",
+    "entityId": "INQ001",
+    "timestamp": "2026-04-02T21:02:19.927Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Inquiry INQ001 status changed from new to contacted",
+    "details": {
+      "name": "Vijay Kumar",
+      "phone": "09211362777",
+      "quotedAmount": 0
+    }
+  },
+  {
+    "id": "AUD047",
+    "action": "status-change",
+    "entity": "inquiry",
+    "entityId": "INQ001",
+    "timestamp": "2026-04-02T21:02:22.588Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Inquiry INQ001 status changed from contacted to new",
+    "details": {
+      "name": "Vijay Kumar",
+      "phone": "09211362777",
+      "quotedAmount": 0
+    }
+  },
+  {
+    "id": "AUD048",
+    "action": "create",
+    "entity": "user",
+    "entityId": "USR-003",
+    "timestamp": "2026-04-02T21:16:55.997Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Created user Tiwari Ji",
+    "details": {
+      "role": "manager",
+      "active": true
+    }
+  },
+  {
+    "id": "AUD049",
+    "action": "update",
+    "entity": "user",
+    "entityId": "USR-003",
+    "timestamp": "2026-04-02T21:17:41.688Z",
+    "actorId": "USR-002",
+    "actorName": "Vijay Kumar",
+    "source": "dashboard",
+    "summary": "Updated user tiwari",
+    "details": {
+      "role": "manager",
+      "active": true
+    }
+  },
+  {
+    "id": "AUD050",
+    "action": "create",
+    "entity": "event",
+    "entityId": "EVT001",
+    "timestamp": "2026-04-02T21:30:02.942Z",
+    "actorId": "USR-003",
+    "actorName": "Tiwari",
+    "source": "dashboard",
+    "summary": "Created public event \"IPL Viewing Party\" on 2026-04-04",
+    "details": {
+      "name": "IPL Viewing Party",
+      "date": "2026-04-04"
+    }
+  },
+  {
+    "id": "AUD051",
+    "action": "update",
+    "entity": "event",
+    "entityId": "EVT001",
+    "timestamp": "2026-04-02T21:30:08.507Z",
+    "actorId": "USR-003",
+    "actorName": "Tiwari",
+    "source": "dashboard",
+    "summary": "Updated event \"IPL Viewing Party\"",
+    "details": {
+      "name": "IPL Viewing Party",
+      "date": "2026-04-04",
+      "visible": false
+    }
+  },
+  {
+    "id": "AUD052",
+    "action": "update",
+    "entity": "event",
+    "entityId": "EVT001",
+    "timestamp": "2026-04-02T21:30:09.324Z",
+    "actorId": "USR-003",
+    "actorName": "Tiwari",
+    "source": "dashboard",
+    "summary": "Updated event \"IPL Viewing Party\"",
+    "details": {
+      "name": "IPL Viewing Party",
+      "date": "2026-04-04",
+      "visible": true
+    }
+  },
+  {
+    "id": "AUD053",
+    "action": "update",
+    "entity": "event",
+    "entityId": "EVT001",
+    "timestamp": "2026-04-02T21:30:30.180Z",
+    "actorId": "USR-003",
+    "actorName": "Tiwari",
+    "source": "dashboard",
+    "summary": "Updated event \"IPL Viewing Party\"",
+    "details": {
+      "name": "IPL Viewing Party",
+      "date": "2026-04-04",
+      "visible": false
+    }
+  },
+  {
+    "id": "AUD054",
+    "action": "update",
+    "entity": "event",
+    "entityId": "EVT001",
+    "timestamp": "2026-04-02T21:30:36.551Z",
+    "actorId": "USR-003",
+    "actorName": "Tiwari",
+    "source": "dashboard",
+    "summary": "Updated event \"IPL Viewing Party\"",
+    "details": {
+      "name": "IPL Viewing Party",
+      "date": "2026-04-04",
+      "visible": true
+    }
+  },
+  {
+    "id": "AUD055",
+    "action": "update",
+    "entity": "event",
+    "entityId": "EVT001",
+    "timestamp": "2026-04-02T21:38:00.553Z",
+    "actorId": "USR-003",
+    "actorName": "Tiwari",
+    "source": "dashboard",
+    "summary": "Updated event \"IPL Viewing Party\"",
+    "details": {
+      "name": "IPL Viewing Party",
+      "date": "2026-04-04",
+      "visible": false
+    }
+  }
+]

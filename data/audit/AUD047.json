@@ -1,0 +1,16 @@
+{
+  "id": "AUD047",
+  "action": "status-change",
+  "entity": "inquiry",
+  "entityId": "INQ001",
+  "timestamp": "2026-04-02T21:02:22.588Z",
+  "actorId": "USR-002",
+  "actorName": "Vijay Kumar",
+  "source": "dashboard",
+  "summary": "Inquiry INQ001 status changed from contacted to new",
+  "details": {
+    "name": "Vijay Kumar",
+    "phone": "09211362777",
+    "quotedAmount": 0
+  }
+}

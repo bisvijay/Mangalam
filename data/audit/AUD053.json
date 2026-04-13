@@ -1,0 +1,16 @@
+{
+  "id": "AUD053",
+  "action": "update",
+  "entity": "event",
+  "entityId": "EVT001",
+  "timestamp": "2026-04-02T21:30:30.180Z",
+  "actorId": "USR-003",
+  "actorName": "Tiwari",
+  "source": "dashboard",
+  "summary": "Updated event \"IPL Viewing Party\"",
+  "details": {
+    "name": "IPL Viewing Party",
+    "date": "2026-04-04",
+    "visible": false
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "AUD009",
+  "action": "create",
+  "entity": "booking",
+  "entityId": "B005",
+  "timestamp": "2026-03-28T02:40:07.224Z",
+  "actorId": "USR-002",
+  "actorName": "Vijay Kumar",
+  "source": "dashboard",
+  "summary": "Created booking B005 for Surender Prasad",
+  "details": {
+    "status": "confirmed",
+    "eventDate": "2026-03-14",
+    "grandTotal": 17982
+  }
+}

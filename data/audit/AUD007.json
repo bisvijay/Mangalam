@@ -1,0 +1,16 @@
+{
+  "id": "AUD007",
+  "action": "create",
+  "entity": "booking",
+  "entityId": "B004",
+  "timestamp": "2026-03-28T02:38:28.848Z",
+  "actorId": "USR-002",
+  "actorName": "Vijay Kumar",
+  "source": "dashboard",
+  "summary": "Created booking B004 for Namesh Prasad",
+  "details": {
+    "status": "confirmed",
+    "eventDate": "2026-03-11",
+    "grandTotal": 18900
+  }
+}

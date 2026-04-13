@@ -1,0 +1,15 @@
+{
+  "id": "AUD050",
+  "action": "create",
+  "entity": "event",
+  "entityId": "EVT001",
+  "timestamp": "2026-04-02T21:30:02.942Z",
+  "actorId": "USR-003",
+  "actorName": "Tiwari",
+  "source": "dashboard",
+  "summary": "Created public event \"IPL Viewing Party\" on 2026-04-04",
+  "details": {
+    "name": "IPL Viewing Party",
+    "date": "2026-04-04"
+  }
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "ITM001",
+    "name": "Plastic Chairs",
+    "category": "Furniture",
+    "quantity": 250,
+    "minStock": 250,
+    "isLowStock": false
+  }
+]

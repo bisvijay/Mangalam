@@ -1,0 +1,64 @@
+{
+  "bookingDate": "2025-11-17",
+  "eventDate": "2026-03-09",
+  "eventEndDate": "2026-03-10",
+  "eventType": "Wedding",
+  "status": "confirmed",
+  "customer": {
+    "name": "Manish Kumar",
+    "phone": "(707) 089-0890",
+    "email": "",
+    "address": "Dumari Mahanwa"
+  },
+  "eventDetails": {
+    "brideName": "",
+    "brideDOB": "",
+    "groomName": "",
+    "groomDOB": ""
+  },
+  "venue": {
+    "hallId": "H-01",
+    "roomsBooked": 15,
+    "guestsCount": 250
+  },
+  "charges": {
+    "roomRate": 5000,
+    "roomNights": 1,
+    "roomTotal": 75000,
+    "hallCharge": 0,
+    "decorationCharge": 0,
+    "cateringCharge": 0,
+    "otherCharges": 0,
+    "subtotal": 75000,
+    "gstBreakdown": [
+      {
+        "item": "5% GST (₹1,000 - ₹7,500)",
+        "taxable": 75000,
+        "rate": 5,
+        "cgst": 1875,
+        "sgst": 1875,
+        "igst": 0
+      }
+    ],
+    "totalGST": 3750,
+    "grandTotal": 78750
+  },
+  "payments": [
+    {
+      "date": "2026-03-28",
+      "amount": 78750,
+      "method": "cash",
+      "receipt": ""
+    }
+  ],
+  "advance": 78750,
+  "balance": 0,
+  "paymentStatus": "paid",
+  "invoiceId": "INV/2526/0006",
+  "notes": "",
+  "id": "B003",
+  "createdAt": "2025-11-17T09:36:07.350Z",
+  "updatedAt": "2026-03-28T16:56:21.304Z",
+  "createdBy": "bis.vijay",
+  "cancellationNote": ""
+}
