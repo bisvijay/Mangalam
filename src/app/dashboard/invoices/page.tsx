@@ -8,7 +8,7 @@ import {
   Card,
   CardContent,
 } from "@/components/ui/card";
-import { Search, FileText, Download } from "lucide-react";
+import { Search, FileText, Download, FileSpreadsheet } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { formatCurrency, formatDate } from "@/lib/utils";
 
@@ -31,10 +31,29 @@ const paymentColor: Record<string, string> = {
   paid: "bg-green-100 text-green-800",
 };
 
+// Generate financial years (current + past 3 years)
+function getFinancialYears() {
+  const years: string[] = [];
+  const now = new Date();
+  const currentYear = now.getMonth() >= 3 ? now.getFullYear() : now.getFullYear() - 1;
+  for (let i = 0; i < 4; i++) {
+    const startYear = currentYear - i;
+    const endYear = startYear + 1;
+    years.push(`${startYear.toString().slice(-2)}${endYear.toString().slice(-2)}`);
+  }
+  return years;
+}
+
 export default function InvoicesPage() {
   const [invoices, setInvoices] = useState<InvoiceEntry[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
+  const [dateFrom, setDateFrom] = useState("");
+  const [dateTo, setDateTo] = useState("");
+  const [statusFilter, setStatusFilter] = useState<string>("all");
+  const [exporting, setExporting] = useState(false);
+
+  const financialYears = getFinancialYears();
 
   useEffect(() => {
     fetch("/api/invoices")
@@ -45,10 +64,57 @@ export default function InvoicesPage() {
   }, []);
 
   const filtered = invoices.filter((inv) => {
-    if (!search) return true;
-    const q = search.toLowerCase();
-    return inv.id.toLowerCase().includes(q) || inv.customerName.toLowerCase().includes(q) || inv.bookingId.toLowerCase().includes(q);
+    // Search filter
+    if (search) {
+      const q = search.toLowerCase();
+      const matchesSearch = inv.id.toLowerCase().includes(q) || 
+        inv.customerName.toLowerCase().includes(q) || 
+        inv.bookingId.toLowerCase().includes(q);
+      if (!matchesSearch) return false;
+    }
+    // Date filters
+    if (dateFrom && inv.invoiceDate < dateFrom) return false;
+    if (dateTo && inv.invoiceDate > dateTo) return false;
+    // Status filter
+    if (statusFilter !== "all" && inv.paymentStatus !== statusFilter) return false;
+    return true;
   });
+
+  const handleGstExport = async (fy?: string) => {
+    setExporting(true);
+    try {
+      const params = new URLSearchParams();
+      if (fy) params.set("fy", fy);
+      if (search) params.set("search", search);
+      if (dateFrom) params.set("dateFrom", dateFrom);
+      if (dateTo) params.set("dateTo", dateTo);
+
+      const response = await fetch(`/api/invoices/gst-export?${params.toString()}`);
+      if (!response.ok) throw new Error("Export failed");
+      
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = fy ? `Mangalam_GST_Returns_FY${fy}.xlsx` : "Mangalam_GST_Returns.xlsx";
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      a.remove();
+    } catch (err) {
+      console.error("GST export error:", err);
+      alert("Failed to export GST data");
+    } finally {
+      setExporting(false);
+    }
+  };
+
+  const clearFilters = () => {
+    setSearch("");
+    setDateFrom("");
+    setDateTo("");
+    setStatusFilter("all");
+  };
 
   return (
     <div className="space-y-6">
@@ -61,6 +127,74 @@ export default function InvoicesPage() {
         <div className="relative flex-1 max-w-sm">
           <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
           <Input placeholder="Search by invoice #, customer, booking..." value={search} onChange={(e) => setSearch(e.target.value)} className="pl-9" />
+        </div>
+      </div>
+
+      {/* Filters Row */}
+      <div className="flex flex-wrap gap-3 items-end">
+        <div className="space-y-1">
+          <label className="text-xs text-muted-foreground">From Date</label>
+          <Input
+            type="date"
+            value={dateFrom}
+            onChange={(e) => setDateFrom(e.target.value)}
+            className="w-40"
+          />
+        </div>
+        <div className="space-y-1">
+          <label className="text-xs text-muted-foreground">To Date</label>
+          <Input
+            type="date"
+            value={dateTo}
+            onChange={(e) => setDateTo(e.target.value)}
+            className="w-40"
+          />
+        </div>
+        <div className="space-y-1">
+          <label className="text-xs text-muted-foreground">Status</label>
+          <select
+            value={statusFilter}
+            onChange={(e) => setStatusFilter(e.target.value)}
+            className="h-10 px-3 rounded-md border border-input bg-background text-sm"
+          >
+            <option value="all">All Status</option>
+            <option value="paid">Paid</option>
+            <option value="partial">Partial</option>
+            <option value="unpaid">Unpaid</option>
+          </select>
+        </div>
+        {(search || dateFrom || dateTo || statusFilter !== "all") && (
+          <Button variant="ghost" size="sm" onClick={clearFilters}>
+            Clear Filters
+          </Button>
+        )}
+        <div className="flex-1" />
+        {/* GST Export Dropdown */}
+        <div className="space-y-1">
+          <label className="text-xs text-muted-foreground">Export GST Returns</label>
+          <div className="flex gap-2">
+            <select
+              id="fy-select"
+              className="h-10 px-3 rounded-md border border-input bg-background text-sm"
+              defaultValue=""
+            >
+              <option value="">Current Filters</option>
+              {financialYears.map((fy) => (
+                <option key={fy} value={fy}>FY {fy.slice(0, 2)}-{fy.slice(2)}</option>
+              ))}
+            </select>
+            <Button
+              variant="outline"
+              disabled={exporting}
+              onClick={() => {
+                const select = document.getElementById("fy-select") as HTMLSelectElement;
+                handleGstExport(select.value || undefined);
+              }}
+            >
+              <FileSpreadsheet className="h-4 w-4 mr-2" />
+              {exporting ? "Exporting..." : "Export Excel"}
+            </Button>
+          </div>
         </div>
       </div>
 

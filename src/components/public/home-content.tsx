@@ -110,7 +110,7 @@ export function HomeContent({
           />
         ))}
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-maroon-900/80 via-maroon-900/70 to-maroon-950/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-maroon-900/40 via-maroon-900/30 to-maroon-950/40" />
         
         {/* Image indicators */}
         {heroImages.length > 1 && (
@@ -162,7 +162,7 @@ export function HomeContent({
         </div>
       </section>
 
-      {/* Upcoming Events */
+      {/* Upcoming Events */}
       {upcomingEvents.length > 0 && (
         <section id="upcoming-events" className="py-10 bg-gradient-to-br from-maroon-50 to-gold-50 dark:from-maroon-950/30 dark:to-gold-950/20 border-b">
           <div className="container mx-auto px-4 space-y-6">
