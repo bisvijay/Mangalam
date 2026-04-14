@@ -9,10 +9,14 @@ import type { GalleryItem, MediaCategory } from "@/types/media";
 const categories: MediaCategory[] = [
   "Main Hall",
   "Outdoor Hall",
+  "1st Floor Hall",
+  "2nd Floor Hall",
+  "3rd Floor Hall",
   "Rooms",
-  "Events",
   "Kitchen",
   "Parking",
+  "Events",
+  "Other",
 ];
 
 export default function GalleryPage() {
