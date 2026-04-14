@@ -11,7 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Save, Loader2, Building2, Receipt } from "lucide-react";
+import { Save, Loader2, Building2, Receipt, Download } from "lucide-react";
 
 interface BusinessSettings {
   businessName: string;
@@ -40,6 +40,7 @@ export default function SettingsPage() {
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [backingUp, setBackingUp] = useState(false);
 
   useEffect(() => {
     fetch("/api/settings")
@@ -82,6 +83,32 @@ export default function SettingsPage() {
       setTimeout(() => setSaved(false), 3000);
     } finally {
       setSaving(false);
+    }
+  }
+
+  async function handleBackup() {
+    setBackingUp(true);
+    try {
+      const response = await fetch("/api/backup");
+      if (!response.ok) {
+        const err = await response.json();
+        throw new Error(err.error || "Backup failed");
+      }
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      const timestamp = new Date().toISOString().split("T")[0];
+      a.download = `mangalam-backup-${timestamp}.json`;
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      a.remove();
+    } catch (err) {
+      console.error("Backup error:", err);
+      alert(err instanceof Error ? err.message : "Failed to create backup");
+    } finally {
+      setBackingUp(false);
     }
   }
 
@@ -168,6 +195,31 @@ export default function SettingsPage() {
               <p className="text-muted-foreground">Hall & Services → 18% (CGST 9% + SGST 9%)</p>
               <p className="text-muted-foreground">Catering → 5% (CGST 2.5% + SGST 2.5%, no ITC)</p>
             </div>
+          </CardContent>
+        </Card>
+
+        {/* Data Backup */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2"><Download className="h-4 w-4" /> Data Backup</CardTitle>
+            <CardDescription>Download all your data for safekeeping</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <p className="text-sm text-muted-foreground">
+              Creates a complete backup of all bookings, customers, invoices, inquiries, inventory, events, and settings.
+            </p>
+            <Button 
+              type="button" 
+              variant="outline" 
+              onClick={handleBackup} 
+              disabled={backingUp}
+            >
+              {backingUp ? (
+                <><Loader2 className="h-4 w-4 animate-spin mr-2" /> Creating Backup...</>
+              ) : (
+                <><Download className="h-4 w-4 mr-2" /> Download Backup</>
+              )}
+            </Button>
           </CardContent>
         </Card>
 

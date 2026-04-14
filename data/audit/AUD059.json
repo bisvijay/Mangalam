@@ -1,0 +1,16 @@
+{
+  "id": "AUD059",
+  "action": "update",
+  "entity": "event",
+  "entityId": "EVT001",
+  "timestamp": "2026-04-14T02:14:06.982Z",
+  "actorId": "USR-002",
+  "actorName": "Vijay Kumar",
+  "source": "dashboard",
+  "summary": "Updated event \"IPL Viewing Party\"",
+  "details": {
+    "name": "IPL Viewing Party",
+    "date": "2026-04-22",
+    "visible": true
+  }
+}
