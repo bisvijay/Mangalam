@@ -1,7 +1,8 @@
 export interface HeroSection {
   title: string;
   subtitle: string;
-  backgroundImage: string;
+  images?: string[];
+  backgroundImage?: string; // deprecated, use images instead
 }
 
 export interface EventTypeContent {

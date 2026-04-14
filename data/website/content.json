@@ -2,7 +2,11 @@
   "hero": {
     "title": "Mangalam Banquet Hall & Hotel",
     "subtitle": "Where every celebration becomes a cherished memory. Premium banquet halls and comfortable rooms in the heart of Bettiah.",
-    "backgroundImage": "/images/hero-bg.jpg"
+    "images": [
+      "/images/hero/wedding1.jpg",
+      "/images/hero/celebration2.jpg",
+      "/images/hero/corporate1.jpg"
+    ]
   },
   "about": "Mangalam Banquet Hall & Hotel is Bettiah's premier destination for weddings, receptions, conferences, and celebrations. With elegant indoor halls, a sprawling outdoor lawn, and 18 well-appointed rooms, we bring together comfort and grandeur under one roof. Our dedicated team ensures every event is flawless — from intimate gatherings to grand weddings with over 1,000 guests.",
   "amenities": [

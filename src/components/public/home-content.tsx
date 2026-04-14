@@ -28,6 +28,7 @@ import { formatDate } from "@/lib/utils";
 interface HomeContentProps {
   heroTitle: string;
   heroSubtitle: string;
+  heroImages: string[];
   aboutText: string;
   phone: string;
   email: string;
@@ -64,12 +65,23 @@ const venues = [
 export function HomeContent({
   heroTitle,
   heroSubtitle,
+  heroImages,
   aboutText,
   phone,
   email,
   address,
 }: HomeContentProps) {
   const { t } = useLanguage();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Auto-rotate hero images every 5 seconds
+  useEffect(() => {
+    if (heroImages.length <= 1) return;
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
 
   const [upcomingEvents, setUpcomingEvents] = useState<{ id: string; name: string; date: string; details: string }[]>([]);
   useEffect(() => {
@@ -82,8 +94,43 @@ export function HomeContent({
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-maroon-800 via-maroon-900 to-maroon-950 text-white">
-        <div className="container mx-auto px-4 py-24 lg:py-32">
+      <section className="relative min-h-[600px] lg:min-h-[700px] text-white overflow-hidden">
+        {/* Background Images */}
+        {heroImages.map((img, index) => (
+          <div
+            key={img}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              index === currentImageIndex ? "opacity-100" : "opacity-0"
+            }`}
+            style={{
+              backgroundImage: `url(${img})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />
+        ))}
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-maroon-900/80 via-maroon-900/70 to-maroon-950/80" />
+        
+        {/* Image indicators */}
+        {heroImages.length > 1 && (
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+            {heroImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentImageIndex(index)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  index === currentImageIndex
+                    ? "bg-gold-400 w-6"
+                    : "bg-white/50 hover:bg-white/80"
+                }`}
+                aria-label={`Show image ${index + 1}`}
+              />
+            ))}
+          </div>
+        )}
+        
+        <div className="relative container mx-auto px-4 py-24 lg:py-32">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <Badge className="bg-gold-500/20 text-gold-300 border-gold-500/30 hover:bg-gold-500/30">
               {t.hero.badge}
@@ -115,7 +162,7 @@ export function HomeContent({
         </div>
       </section>
 
-      {/* Upcoming Events */}
+      {/* Upcoming Events */
       {upcomingEvents.length > 0 && (
         <section id="upcoming-events" className="py-10 bg-gradient-to-br from-maroon-50 to-gold-50 dark:from-maroon-950/30 dark:to-gold-950/20 border-b">
           <div className="container mx-auto px-4 space-y-6">
