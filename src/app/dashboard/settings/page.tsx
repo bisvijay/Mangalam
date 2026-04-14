@@ -11,7 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Save, Loader2, Building2, Receipt, Download } from "lucide-react";
+import { Save, Loader2, Building2, Receipt, Download, Upload, AlertTriangle } from "lucide-react";
 
 interface BusinessSettings {
   businessName: string;
@@ -41,6 +41,10 @@ export default function SettingsPage() {
   const [saved, setSaved] = useState(false);
   const [loading, setLoading] = useState(true);
   const [backingUp, setBackingUp] = useState(false);
+  const [restoring, setRestoring] = useState(false);
+  const [restoreFile, setRestoreFile] = useState<File | null>(null);
+  const [showRestoreConfirm, setShowRestoreConfirm] = useState(false);
+  const [restoreResult, setRestoreResult] = useState<{ success: boolean; message: string } | null>(null);
 
   useEffect(() => {
     fetch("/api/settings")
@@ -109,6 +113,53 @@ export default function SettingsPage() {
       alert(err instanceof Error ? err.message : "Failed to create backup");
     } finally {
       setBackingUp(false);
+    }
+  }
+
+  function handleFileSelect(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (file) {
+      setRestoreFile(file);
+      setRestoreResult(null);
+    }
+  }
+
+  async function handleRestore() {
+    if (!restoreFile) return;
+    
+    setRestoring(true);
+    setShowRestoreConfirm(false);
+    setRestoreResult(null);
+    
+    try {
+      const text = await restoreFile.text();
+      const backup = JSON.parse(text);
+      
+      const response = await fetch("/api/backup/restore", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(backup),
+      });
+      
+      const result = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(result.error || "Restore failed");
+      }
+      
+      setRestoreResult({ success: true, message: result.message });
+      setRestoreFile(null);
+      // Reset file input
+      const fileInput = document.getElementById("restore-file") as HTMLInputElement;
+      if (fileInput) fileInput.value = "";
+    } catch (err) {
+      console.error("Restore error:", err);
+      setRestoreResult({ 
+        success: false, 
+        message: err instanceof Error ? err.message : "Failed to restore backup" 
+      });
+    } finally {
+      setRestoring(false);
     }
   }
 
@@ -198,28 +249,114 @@ export default function SettingsPage() {
           </CardContent>
         </Card>
 
-        {/* Data Backup */}
+        {/* Data Backup & Restore */}
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-center gap-2"><Download className="h-4 w-4" /> Data Backup</CardTitle>
-            <CardDescription>Download all your data for safekeeping</CardDescription>
+            <CardTitle className="flex items-center gap-2"><Download className="h-4 w-4" /> Data Backup & Restore</CardTitle>
+            <CardDescription>Download all your data for safekeeping or restore from a backup</CardDescription>
           </CardHeader>
-          <CardContent className="space-y-4">
-            <p className="text-sm text-muted-foreground">
-              Creates a complete backup of all bookings, customers, invoices, inquiries, inventory, events, and settings.
-            </p>
-            <Button 
-              type="button" 
-              variant="outline" 
-              onClick={handleBackup} 
-              disabled={backingUp}
-            >
-              {backingUp ? (
-                <><Loader2 className="h-4 w-4 animate-spin mr-2" /> Creating Backup...</>
-              ) : (
-                <><Download className="h-4 w-4 mr-2" /> Download Backup</>
+          <CardContent className="space-y-6">
+            {/* Backup Section */}
+            <div className="space-y-3">
+              <h4 className="text-sm font-medium">Download Backup</h4>
+              <p className="text-sm text-muted-foreground">
+                Creates a complete backup of all bookings, customers, invoices, inquiries, inventory, events, and settings.
+              </p>
+              <Button 
+                type="button" 
+                variant="outline" 
+                onClick={handleBackup} 
+                disabled={backingUp}
+              >
+                {backingUp ? (
+                  <><Loader2 className="h-4 w-4 animate-spin mr-2" /> Creating Backup...</>
+                ) : (
+                  <><Download className="h-4 w-4 mr-2" /> Download Backup</>
+                )}
+              </Button>
+            </div>
+
+            <hr />
+
+            {/* Restore Section */}
+            <div className="space-y-3">
+              <h4 className="text-sm font-medium">Restore from Backup</h4>
+              <p className="text-sm text-muted-foreground">
+                Upload a previously downloaded backup file to restore your data. This will <strong>overwrite</strong> existing data.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Input
+                  id="restore-file"
+                  type="file"
+                  accept=".json"
+                  onChange={handleFileSelect}
+                  className="flex-1"
+                />
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={() => setShowRestoreConfirm(true)}
+                  disabled={!restoreFile || restoring}
+                >
+                  {restoring ? (
+                    <><Loader2 className="h-4 w-4 animate-spin mr-2" /> Restoring...</>
+                  ) : (
+                    <><Upload className="h-4 w-4 mr-2" /> Restore</>
+                  )}
+                </Button>
+              </div>
+
+              {restoreFile && !showRestoreConfirm && !restoring && (
+                <p className="text-sm text-muted-foreground">
+                  Selected: <strong>{restoreFile.name}</strong> ({(restoreFile.size / 1024).toFixed(1)} KB)
+                </p>
               )}
-            </Button>
+
+              {/* Confirmation Dialog */}
+              {showRestoreConfirm && (
+                <div className="rounded-lg border border-orange-200 bg-orange-50 p-4 space-y-3">
+                  <div className="flex items-start gap-3">
+                    <AlertTriangle className="h-5 w-5 text-orange-600 mt-0.5" />
+                    <div className="space-y-1">
+                      <p className="font-medium text-orange-800">Are you sure you want to restore?</p>
+                      <p className="text-sm text-orange-700">
+                        This will overwrite all current data with the backup. This action cannot be undone.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-2 justify-end">
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setShowRestoreConfirm(false)}
+                    >
+                      Cancel
+                    </Button>
+                    <Button
+                      type="button"
+                      variant="destructive"
+                      size="sm"
+                      onClick={handleRestore}
+                    >
+                      Yes, Restore Data
+                    </Button>
+                  </div>
+                </div>
+              )}
+
+              {/* Result Message */}
+              {restoreResult && (
+                <div className={`rounded-lg p-3 text-sm ${
+                  restoreResult.success 
+                    ? "bg-green-50 text-green-800 border border-green-200" 
+                    : "bg-red-50 text-red-800 border border-red-200"
+                }`}>
+                  {restoreResult.message}
+                </div>
+              )}
+            </div>
           </CardContent>
         </Card>
 
