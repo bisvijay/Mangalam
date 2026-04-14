@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { useLanguage } from "@/components/providers/language-provider";
 
@@ -29,9 +30,18 @@ export function FooterContent({
         <div className="grid gap-8 md:grid-cols-3">
           {/* Branding */}
           <div>
-            <h3 className="text-lg font-bold text-gold-400 mb-3">
-              {businessName}
-            </h3>
+            <div className="flex items-center gap-3 mb-3">
+              <Image
+                src="/images/Mangalam_logo.png"
+                alt="Mangalam Logo"
+                width={40}
+                height={40}
+                className="rounded"
+              />
+              <h3 className="text-lg font-bold text-gold-400">
+                {businessName}
+              </h3>
+            </div>
             <p className="text-sm text-maroon-200">{t.footer.tagline}</p>
           </div>
 

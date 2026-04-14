@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -46,6 +47,15 @@ export default function LoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-maroon-50 to-gold-50">
       <Card className="w-full max-w-md mx-4">
         <CardHeader className="text-center">
+          <div className="flex justify-center mb-2">
+            <Image
+              src="/images/Mangalam_logo.png"
+              alt="Mangalam Logo"
+              width={64}
+              height={64}
+              className="rounded"
+            />
+          </div>
           <CardTitle className="text-2xl font-bold text-maroon-800">
             Mangalam
           </CardTitle>

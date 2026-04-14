@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useLanguage } from "@/components/providers/language-provider";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { LanguageToggle } from "@/components/ui/language-toggle";
@@ -13,6 +14,13 @@ export function PublicHeaderClient() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/images/Mangalam_logo.png"
+              alt="Mangalam Logo"
+              width={36}
+              height={36}
+              className="rounded"
+            />
             <span className="text-xl font-bold text-maroon-800">Mangalam</span>
           </Link>
 

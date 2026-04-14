@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
 import { cn } from "@/lib/utils";
@@ -43,10 +44,19 @@ export function Sidebar() {
   const SidebarContent = () => (
     <>
       {/* Logo */}
-      <div className="p-6 border-b">
-        <Link href="/dashboard" className="block">
-          <h1 className="text-xl font-bold text-maroon-800">Mangalam</h1>
-          <p className="text-xs text-muted-foreground">Management Panel</p>
+      <div className="p-4 border-b">
+        <Link href="/dashboard" className="flex items-center gap-3">
+          <Image
+            src="/images/Mangalam_logo.png"
+            alt="Mangalam Logo"
+            width={40}
+            height={40}
+            className="rounded"
+          />
+          <div>
+            <h1 className="text-lg font-bold text-maroon-800">Mangalam</h1>
+            <p className="text-xs text-muted-foreground">Management Panel</p>
+          </div>
         </Link>
       </div>
 
