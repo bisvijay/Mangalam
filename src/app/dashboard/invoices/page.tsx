@@ -31,19 +31,6 @@ const paymentColor: Record<string, string> = {
   paid: "bg-green-100 text-green-800",
 };
 
-// Generate financial years (current + past 3 years)
-function getFinancialYears() {
-  const years: string[] = [];
-  const now = new Date();
-  const currentYear = now.getMonth() >= 3 ? now.getFullYear() : now.getFullYear() - 1;
-  for (let i = 0; i < 4; i++) {
-    const startYear = currentYear - i;
-    const endYear = startYear + 1;
-    years.push(`${startYear.toString().slice(-2)}${endYear.toString().slice(-2)}`);
-  }
-  return years;
-}
-
 export default function InvoicesPage() {
   const [invoices, setInvoices] = useState<InvoiceEntry[]>([]);
   const [loading, setLoading] = useState(true);
@@ -52,8 +39,6 @@ export default function InvoicesPage() {
   const [dateTo, setDateTo] = useState("");
   const [statusFilter, setStatusFilter] = useState<string>("all");
   const [exporting, setExporting] = useState(false);
-
-  const financialYears = getFinancialYears();
 
   useEffect(() => {
     fetch("/api/invoices")
@@ -80,11 +65,10 @@ export default function InvoicesPage() {
     return true;
   });
 
-  const handleGstExport = async (fy?: string) => {
+  const handleGstExport = async () => {
     setExporting(true);
     try {
       const params = new URLSearchParams();
-      if (fy) params.set("fy", fy);
       if (search) params.set("search", search);
       if (dateFrom) params.set("dateFrom", dateFrom);
       if (dateTo) params.set("dateTo", dateTo);
@@ -96,7 +80,7 @@ export default function InvoicesPage() {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = fy ? `Mangalam_GST_Returns_FY${fy}.xlsx` : "Mangalam_GST_Returns.xlsx";
+      a.download = "Mangalam_GST_Returns.xlsx";
       document.body.appendChild(a);
       a.click();
       window.URL.revokeObjectURL(url);
@@ -169,33 +153,15 @@ export default function InvoicesPage() {
           </Button>
         )}
         <div className="flex-1" />
-        {/* GST Export Dropdown */}
-        <div className="space-y-1">
-          <label className="text-xs text-muted-foreground">Export GST Returns</label>
-          <div className="flex gap-2">
-            <select
-              id="fy-select"
-              className="h-10 px-3 rounded-md border border-input bg-background text-sm"
-              defaultValue=""
-            >
-              <option value="">Current Filters</option>
-              {financialYears.map((fy) => (
-                <option key={fy} value={fy}>FY {fy.slice(0, 2)}-{fy.slice(2)}</option>
-              ))}
-            </select>
-            <Button
-              variant="outline"
-              disabled={exporting}
-              onClick={() => {
-                const select = document.getElementById("fy-select") as HTMLSelectElement;
-                handleGstExport(select.value || undefined);
-              }}
-            >
-              <FileSpreadsheet className="h-4 w-4 mr-2" />
-              {exporting ? "Exporting..." : "Export Excel"}
-            </Button>
-          </div>
-        </div>
+        {/* GST Export Button */}
+        <Button
+          variant="outline"
+          disabled={exporting}
+          onClick={() => handleGstExport()}
+        >
+          <FileSpreadsheet className="h-4 w-4 mr-2" />
+          {exporting ? "Exporting..." : "Export GST (Excel)"}
+        </Button>
       </div>
 
       {loading ? (
